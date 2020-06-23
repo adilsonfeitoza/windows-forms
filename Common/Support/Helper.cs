@@ -29,7 +29,7 @@ namespace Common.Support
                 if (response.Result.IsSuccessStatusCode)
                     return JsonConvert.DeserializeObject<T>(responseString.Result);
 
-                throw new Exception(responseString.Result);
+                throw new Exception("Erro ao processar requisição");
             }
         }
 
